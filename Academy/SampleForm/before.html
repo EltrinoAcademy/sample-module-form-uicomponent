@@ -1,0 +1,111 @@
+<div>
+  <div data-role="spinner" data-component="sampleform_form.areas" class="admin__data-grid-loading-mask">
+    <div class="spinner">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+  <div data-bind="scope: 'sampleform_form.areas'" class="entry-edit form-inline">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+  </div>
+  <script type="text/x-magento-init">
+      {
+          "*": {
+              "Magento_Ui/js/core/app": {
+                  "types": {
+                      "dataSource": {"component": "Magento_Ui\/js\/form\/provider"},
+                      "input": {"extends": "sampleform_form"},
+                      "form.input": {"extends": "input"},
+                      "fieldset": {
+                          "component": "Magento_Ui\/js\/form\/components\/fieldset",
+                          "extends": "sampleform_form"
+                      },
+                      "sampleform_form": {
+                          "component": "Magento_Ui\/js\/form\/form",
+                          "provider": "sampleform_form.sampleform_form_data_source",
+                          "deps": "sampleform_form.sampleform_form_data_source"
+                      },
+                      "nav": {
+                          "component": "Magento_Ui\/js\/form\/components\/tab_group",
+                          "config": {"template": "ui\/tab"},
+                          "extends": "sampleform_form"
+                      },
+                      "html_content": {
+                          "component": "Magento_Ui\/js\/form\/components\/html",
+                          "extends": "sampleform_form"
+                      },
+                      "tab": {
+                          "component": "Magento_Ui\/js\/form\/components\/area",
+                          "extends": "sampleform_form"
+                      }
+                  },
+                  "components": {
+                      "sampleform_form": {
+                          "children": {
+                              "sections": {"type": "nav", "config": {"label": "Sample Form"}, "children": []},
+                              "areas": {
+                                  "type": "sampleform_form",
+                                  "config": {"namespace": "sampleform_form"},
+                                  "children": {
+                                      "sample_fieldset": {
+                                          "type": "tab",
+                                          "dataScope": "data.sample_fieldset",
+                                          "config": {"label": "Sample Fieldset"},
+                                          "insertTo": {"sampleform_form.sections": {"position": 20}},
+                                          "children": {
+                                              "sample_fieldset": {
+                                                  "type": "fieldset",
+                                                  "name": "sample_fieldset",
+                                                  "children": {
+                                                      "title": {
+                                                          "type": "form.input",
+                                                          "name": "title",
+                                                          "children": [],
+                                                          "dataScope": "title",
+                                                          "config": {
+                                                              "component": "Magento_Ui\/js\/form\/element\/abstract",
+                                                              "template": "ui\/form\/field",
+                                                              "label": "Some text",
+                                                              "visible": true,
+                                                              "dataType": "text",
+                                                              "formElement": "input",
+                                                              "source": "sampleform",
+                                                              "displayArea": "body"
+                                                          }
+                                                      },
+                                                      "color": {
+                                                          "type": "form.input",
+                                                          "name": "color",
+                                                          "children": [],
+                                                          "dataScope": "color",
+                                                          "config": {
+                                                              "component": "Magento_SampleForm\/js\/form\/element\/color-select",
+                                                              "template": "ui\/form\/field",
+                                                              "elementTmpl": "Magento_SampleForm\/form\/element\/color-select",
+                                                              "label": "Autumn colors",
+                                                              "visible": true,
+                                                              "dataType": "text",
+                                                              "formElement": "input",
+                                                              "source": "sampleform",
+                                                              "displayArea": "body"
+                                                          }
+                                                      }
+                                                  },
+                                                  "config": {"label": "Sample Fieldset", "displayArea": "body"}
+                                              }
+                                          }
+                                      }
+                                  }
+                              },
+                              "sampleform_form_data_source": {
+                                  "type": "dataSource",
+                                  "name": "sampleform_form_data_source",
+                                  "dataScope": "sampleform_form",
+                                  "config": {"params": {"namespace": "sampleform_form"}}
+                              }
+                          }
+                      }
+                  }
+              }
+          }
+      }</script>
+</div>
