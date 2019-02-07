@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>
+            Knockout Tutorial
+        </title>
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block template="Academy_Knockout::content.phtml" name="academy_knockout_block"/>
+            <block template="Academy_Knockout::content-js.phtml" name="academy_knockout_block_js">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="knockout-template-js" xsi:type="array">
+                                <item name="component" xsi:type="string">Academy_Knockout/js/template</item>
+                                <item name="template" xsi:type="string">Academy_Knockout/template</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="title" xsi:type="string" translate="true">
+                                        Hello this is content populated with XML!
+                                    </item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

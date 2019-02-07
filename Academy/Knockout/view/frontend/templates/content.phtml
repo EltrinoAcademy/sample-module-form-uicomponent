@@ -1,0 +1,18 @@
+<div data-bind="scope: 'knockout-template'">
+  <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "knockout-template": {
+                    "component": "Academy_Knockout\/js\/template",
+                    "template": "Academy_Knockout\/template"
+                }
+            }
+        }
+    }
+}
+</script>

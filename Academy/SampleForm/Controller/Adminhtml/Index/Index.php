@@ -1,12 +1,6 @@
 <?php
 namespace Academy\SampleForm\Controller\Adminhtml\Index;
 
-/**
- * Responsible for loading page content.
- *
- * This is a basic controller that only loads the corresponding layout file. It may duplicate other such
- * controllers, and thus it is considered tech debt. This code duplication will be resolved in future releases.
- */
 class Index extends \Magento\Backend\App\Action
 {
     /**
@@ -29,7 +23,7 @@ class Index extends \Magento\Backend\App\Action
     }
 
     /**
-     * Load the page defined in view/frontend/layout/samplenewpage_index_index.xml
+     * Load the page defined in view/adminhtml/layout/sampleform_index_index.xml
      *
      * @return \Magento\Framework\View\Result\Page
      */

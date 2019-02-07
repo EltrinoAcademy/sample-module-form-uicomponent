@@ -1,5 +1,5 @@
 <?php
-namespace Academy\SampleForm\Controller\Index;
+namespace Academy\Knockout\Controller\Index;
 
 class Index extends \Magento\Framework\App\Action\Action
 {
@@ -14,7 +14,7 @@ class Index extends \Magento\Framework\App\Action\Action
     }
 
     /**
-     * Load the page defined in view/frontend/layout/samplenewpage_index_index.xml
+     * Load the page defined in view/frontend/layout/knockout_index_index.xml
      *
      * @return \Magento\Framework\View\Result\Page
      */
