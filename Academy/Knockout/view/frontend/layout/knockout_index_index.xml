@@ -25,6 +25,7 @@
                     </argument>
                 </arguments>
             </block>
+            <uiComponent name="knockout_template_ui"/>
         </referenceContainer>
     </body>
 </page>

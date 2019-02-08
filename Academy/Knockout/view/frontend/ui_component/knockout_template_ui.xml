@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Copyright © 2016 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<container xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="template" xsi:type="string">templates/knockout_template_ui</item>
+        <item name="config" xsi:type="array">
+            <!--component constructor-->
+            <item name="component" xsi:type="string">Academy_Knockout/js/template</item>
+            <item name="template" xsi:type="string">Academy_Knockout/template</item>
+            <item name="title" xsi:type="string" translate="true">
+                Hello this is content populated with UI Component!
+            </item>
+        </item>
+    </argument>
+    <dataSource name="knockout_template_ui_data_source">
+        <argument name="dataProvider" xsi:type="configurableObject">
+            <argument name="class" xsi:type="string">Academy\Knockout\Model\DataProvider</argument>
+            <argument name="name" xsi:type="string">knockout_template_ui_data_source</argument>
+            <argument name="primaryFieldName" xsi:type="string">entity_id</argument>
+            <argument name="requestFieldName" xsi:type="string">id</argument>
+        </argument>
+    </dataSource>
+</container>
